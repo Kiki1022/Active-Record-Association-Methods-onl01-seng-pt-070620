@@ -7,8 +7,8 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    #binding.pry
-    if artist.name != "Drake" 
+    binding.pry
+    Artist.find_or_create_by(name: "Drake")
     artist = Artist.create
     artist.name = "Drake"
     self.artist_id = artist.id
