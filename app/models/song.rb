@@ -7,7 +7,7 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    #binding.pry
+    binding.pry
     until artist.include("Drake")
     artist = Artist.create
     artist.name = "Drake"
